@@ -1,0 +1,369 @@
+/* Reset de estilos para garantizar la consistencia en diferentes navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para dispositivos con un ancho de pantalla de hasta 600px */
+@media only screen and (max-width: 600px) {
+    .title-text {
+        font-size: 1.5em;
+    }
+
+    .title-main {
+        font-size: 1.2em;
+    }
+
+    .slider-container,
+    .slider,
+    .slider img {
+        max-height: 300px;
+    }
+
+    .picture-profile {
+        width: 50%;
+    }
+
+    #experience img,
+    #contact img {
+        width: 70%;
+    }
+
+    footer img {
+        width: 20%;
+    }
+
+    .skills-container {
+        max-width: 100%;
+    }
+}
+
+/* Estilos para dispositivos con un ancho de pantalla de hasta 768px */
+@media only screen and (max-width: 768px) {
+    .slider-container,
+    .slider,
+    .slider img {
+        max-height: 400px;
+    }
+
+    .title-text {
+        font-size: 1.8em;
+    }
+
+    .title-main {
+        font-size: 1.4em;
+    }
+
+    .picture-profile {
+        width: 40%;
+    }
+
+    #experience img,
+    #contact img {
+        width: 60%;
+    }
+
+    footer img {
+        width: 15%;
+    }
+}
+
+/* Estilos para dispositivos con un ancho de pantalla de hasta 1024px */
+@media only screen and (max-width: 1024px) {
+    .title-text {
+        font-size: 2em;
+    }
+
+    .title-main {
+        font-size: 1.5em;
+    }
+
+    .slider-container,
+    .slider,
+    .slider img {
+        max-height: 500px;
+    }
+
+    .picture-profile {
+        width: 30%;
+    }
+
+    #experience img,
+    #contact img {
+        width: 50%;
+    }
+
+    footer img {
+        width: 12%;
+    }
+}
+
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centramos verticalmente */
+}
+
+.title-text {
+    font-size: 2em;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.title-main {
+    font-size: 1.5em;
+    color: #000000;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+
+/* Estilos para el slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+/* Estilos para el texto sobre el slider */
+.text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    /* Ajusta el color del texto para que sea legible sobre las imágenes */
+    z-index: 1;
+    /* Asegura que el texto esté sobre las imágenes */
+}
+
+/* Estilos para las secciones */
+.section {
+    background-color: #fff;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Estilos para las imágenes */
+
+.picture-profile {
+    width: 30%;
+}
+
+#experience img {
+    width: 40%;
+}
+
+#contact img {
+    width: 30%;
+}
+
+img:not(.skill img) {
+    display: block;
+    margin: 20px auto;
+    /* Centramos la imagen y le agregamos un margen */
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-out;
+    /* Añadimos animación a las imágenes */
+}
+
+/* Efecto al pasar el ratón sobre las imágenes */
+img:not(.skill img):hover {
+    transform: scale(1.1);
+    /* Hacemos un ligero aumento al pasar el ratón */
+}
+
+/* Estilos para los títulos de sección */
+h2 {
+    color: #4CAF50;
+}
+
+/* Añadimos estilos para todos los párrafos */
+p {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    /* Ajustamos el tamaño de la fuente */
+    line-height: 1.6;
+    color: #555;
+    /* Color de texto ajustado */
+    border-left: 4px solid #4CAF50;
+    /* Borde izquierdo verde */
+    padding-left: 10px;
+    /* Espaciado interno en el borde izquierdo */
+
+    /* Añadimos animación al borde izquierdo */
+    transition: border-left 0.5s ease-out;
+}
+
+/* Cambiamos el color del borde izquierdo al pasar el ratón sobre los párrafos */
+p:hover {
+    border-left-color: #FF9800;
+    /* Color de borde izquierdo al pasar el ratón */
+}
+
+/* Añadimos animación al texto al desplazarse */
+p.animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estilos para los títulos de artículo */
+article h3 {
+    font-family: 'Verdana', sans-serif;
+    /* Cambio de fuente para h3 en artículos */
+    color: #4CAF50;
+    /* Cambio de color para h3 en artículos */
+}
+
+/* Estilos para los textos fuertes */
+strong {
+    font-family: 'Comic Sans MS', cursive;
+    /* Cambio de fuente para strong */
+    color: #e74c3c;
+    /* Cambio de color para strong */
+}
+
+/* Estilos para la lista de habilidades */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Cambiamos el cursor al pasar sobre las habilidades */
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skill:hover img {
+    opacity: 1;
+}
+
+/* Añadimos efecto al pasar el ratón sobre las habilidades */
+.skill:hover {
+    background-color: #FF9800;
+    /* Cambiamos el color al pasar el ratón */
+    transform: scale(1.1);
+    /* Hacemos un ligero aumento al pasar el ratón */
+}
+
+.skill:hover .skill-description {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* Animación para mostrar habilidades */
+.skills-container {
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+}
+
+.show-skills .skills-container {
+    opacity: 1;
+}
+
+/* Estilos para la seccion social */
+
+#social img {
+
+    width: 5%;
+    display: inline;
+    align-items: center;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 5px 0;
+    height: auto;
+}
+
+footer p {
+    color: #000000;
+    font-size: 30px;
+
+}
+
+footer img{
+    width: 10%;
+}
+
+
+/* Estilos para enlaces */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
